@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;1,100;1,200;1,300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: sticky;
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 5% 0px 5%;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: auto;
+    color: #ff4444;
+}
+
+.logo > :last-child{
+    margin-left: 70px;
+    color: #30363c;
+}
+
+.vertical {
+    border-left: 1px solid #ff4444;
+    height: 30px;
+    position:absolute;
+    left: 17%;
+}
+
+.nav{
+    display: flex;
+}
+
+/* .nav button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    height: 40px;
+    background-color: #dce4f1;
+    border-color: #dce4f1;
+    padding: 10px;
+    margin: auto;
+} */
+
+.nav > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    text-decoration: none; 
+}
+
+.nav > a  img{
+    width: 20px;
+    margin-right: 15px;
+}
+
+.logo img{
+    width: 60px;
+}
+
+
+/* //////////////////////////////////////////////////////////// */
+
+.search-bar{
+    width: 95%;
+    border: 1px solid white;
+    margin: auto;
+    padding-bottom: 40px;
+    background: rgb(218,244,252);
+    background: linear-gradient(90deg, rgba(218,244,252,1) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 48%, rgba(255,255,255,1) 85%, rgba(254,238,204,1) 100%);
+}
+
+
+.search{
+    font-family: 'Poppins';
+    font-weight: 400;
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.search > div{
+    height: 60px;
+    display: flex;
+    justify-content:  space-between;
+    margin: auto;
+}
+
+.search > div > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search form{
+    border: 1px solid black;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    border-radius: 25px;
+    border-color: white;
+    font-family: 'Poppins';
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+form input{
+    width: 100%;
+    float: 1;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+form button{
+    height: 90%;
+    width: 15%;
+    margin: auto;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #10847e;
+    color:  white;
+    font-size: 15px;
+    margin-right: 3px;
+    font-family: 'Poppins';
+}
+
+form .fa-magnifying-glass{
+    align-self: center;
+    padding: 10px 20px;
+    color: #777;
+}
+
+/* /////////////////////////////////////////////////////////////////// */
+
+.categories{
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+}
+
+
+.categories > div{
+    height: 100%;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Poppins';
+}
+
+.categories > div > h5{
+    color: #f47779;
+}
+
+.categories >  :hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.categories img{
+    width: 100px;
+}
+
+
+/* ////////////////////////////////////////////////////////////////// */
+
+.presc{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    justify-content: flex-end;
+    background-color: #eef4ff;
+    font-family: 'Poppins';
+    border-radius: 10px;
+}
+
+.presc > :nth-child(2){
+    width: 35%;
+    height: 100%;
+    margin-left: 10px;
+}
+
+
+.presc > :nth-child(3){
+    width: 55%;
+    height: 100%;
+    padding: 30px;
+    background-color: white;
+}
+
+.presc > :nth-child(3) table > tbody > tr :nth-child(odd){
+    text-align: center;
+    background-color: #97aacd;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.presc > :nth-child(3) table > tbody > tr :nth-child(even){
+    padding-left: 10px;
+}
+
+.presc img{
+    width: 100px;
+}
+
+.presc > :nth-child(2) > h3, p{
+    margin-bottom: 10px;
+}
+
+.presc > :nth-child(2) > a{
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #10847e;
+    border-color: #10847e;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+}
