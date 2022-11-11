@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;1,100;1,200;1,300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins';
+}
+
+* a{
+    text-decoration: none;
+    pointer-events: none;
+}
+
+header{
+    position: sticky;
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 5% 0px 5%;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: auto;
+    color: #ff4444;
+}
+
+.logo > :last-child{
+    margin-left: 70px;
+    color: #30363c;
+}
+
+.vertical {
+    border-left: 1px solid #ff4444;
+    height: 30px;
+    position:absolute;
+    left: 17%;
+}
+
+.nav{
+    display: flex;
+}
+
+/* .nav button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    height: 40px;
+    background-color: #dce4f1;
+    border-color: #dce4f1;
+    padding: 10px;
+    margin: auto;
+} */
+
+.nav > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    text-decoration: none; 
+    color: #4f585e;
+}
+
+.nav > a > i{
+    margin-right: 10px;
+    margin-top: -7px;
+}
+
+.logo img{
+    width: 60px;
+}
+

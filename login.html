@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="./CSS/signup.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
+        <script src="https://kit.fontawesome.com/1bffa3735e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<section class="login">
+		<div class="login_box">
+			<div class="left">
+				<div class="top_link"><a href="./landing.html"> <i class="fa-solid fa-angle-left"></i> Return home</a></div>
+				<div class="contact">
+					<form action="">
+						<h3>LogIN</h3>
+						<input id="email" type="text" placeholder="EMAIL ID" required>
+						<input id="password" type="text" placeholder="PASSWORD" required>
+						<button class="submit">LogIn</button>
+					</form>
+				</div>
+			</div>
+            <div class="right">
+                <img src="./data/2853458.jpg">
+            </div>
+		</div>
+	</section>
+</body>
+</html>
+
+<script>
+	let users = JSON.parse(localStorage.getItem('user'));
+	document.querySelector('form').addEventListener('submit', login);
+	let userpass = [];
+	let userEmail = [];
+	function login(event){
+		event.preventDefault();
+		let userid = document.getElementById('email').value;
+		let password = +document.getElementById('password').value;
+
+		for(let i = 0; i < users.length; i++){
+			userpass.push(users[i].password);
+			userEmail.push(users[i].email)
+		}
+		
+		if(userEmail.includes(userid)){
+			if(userpass.includes(password)){
+				window.location = './home.html'
+			} else {
+				alert('Wrong Password!!!!');
+			}
+		} else{
+			alert('You are not an existing user \n Try to Sign Up')
+		}
+	}
+
+	
+</script>

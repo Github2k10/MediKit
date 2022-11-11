@@ -410,8 +410,75 @@ form .fa-magnifying-glass{
     margin-bottom: 50px;
     display: flex;
     background-color: #d7faf8;
+    position: relative;
 }
 
-.banner > div img{
+.banner > img{
     width: 100%;
+    margin: 0;
 }
+
+.banner > div{
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    left: 40%;
+    color: #333a40;
+}
+
+.banner > div h1, h3, img{
+    margin-bottom: 10px;
+}
+
+.banner h1{
+    font-size: 40px;
+}
+
+.about{
+    width: 90%;
+    margin: auto;
+    font-family: 'poppins';
+    font-size: 14px;
+    color: #5b6165;
+    margin-bottom: 70px;
+}
+
+.about b{
+    color: #4f5356;
+}
+
+footer{
+    width: 90%;
+    margin: 30px;
+    background-color: #eef4ff;
+    margin-top: 50px;
+    padding: 40px;
+}
+
+footer > div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20px;
+}
+
+footer > div a{
+    text-decoration:  none;
+    color: #4f585e;
+}
+
+footer > div > div i{
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+footer > div:last-child{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > div:last-child div img{
+    width: auto;
+    margin-right: 20px;
+}
+}
+
