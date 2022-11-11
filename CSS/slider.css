@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		.section1{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0 35px;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            width: 95%;
+		}
+
+		.wrapper{
+			max-width: 1290px;
+			position: relative;
+            border-radius: 25px;
+		}
+
+		.wrapper i{
+			top: 50%;
+			height: 46px;
+			font-size: 1.2rem;
+			width: 46px;
+			cursor: pointer;
+			position: absolute;
+			text-align: center;
+			line-height: 46px;
+			background: #30363c;
+			border-radius: 50%;
+			transform: translateY(-50%);
+            color: white;
+		}
+
+		.wrapper i:first-child{
+			left: -23px;
+		}
+
+		.wrapper i:last-child{
+			right: -23px;
+		}
+
+		.wrapper .carousel{
+			white-space: nowrap;
+			font-size: 0px;
+			cursor: pointer;
+			overflow: hidden;
+		}
+
+		.carousel > a img{
+			height: 200px;
+			object-fit: cover;
+			margin-left: 14px;
+			width: calc(100%/3);
+			scroll-behavior: smooth;
+            border-radius: 25px;
+		}
+
+
+/* ////////////////////////////////////////// */
+.section2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 95%;
+}
+
+.wrapper1{
+    max-width: 1300px;
+    position: relative;
+    display: flex;
+}
+
+.wrapper1 i{
+    top: 50%;
+    height: 30px;
+    font-size: 1.2rem;
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    line-height: 30px;
+    background: #30363c;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.wrapper1 .carousel1{
+    display: flex;
+    white-space: nowrap;
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.wrapper1 .carousel1 > a{
+    text-decoration: none;
+}
+.wrapper1 .carousel1 > a > div{
+    display: flex;
+    font-size: 13px;
+    border: 1px solid #c8deee;
+    padding: 10px;
+    scroll-behavior: smooth;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.wrapper1 .carousel1 > a > div > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.wrapper1 i:first-child{
+    left: -19px;
+}
+
+.wrapper1 i:last-child{
+    right: -19px;
+}
+
+/*  ////////////////////////////////////////////////// */
+.section3{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.section3 img{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+}
+
+.payO{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    color: #5b6165;
+    margin-bottom: 20px;
+}
+
+
+.payO a{
+    font-size: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-family: 'Poppins';
+}

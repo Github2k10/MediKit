@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SignUp</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="./CSS/signup.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
+	<script src="https://kit.fontawesome.com/1bffa3735e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="login">
+		<div class="login_box">
+			<div class="left">
+				<div class="top"> <a href="./landing.html"></a>  <i class="fa-solid fa-angle-left"></i> Return home</div>
+				<div class="contact">
+					<form action="">
+						<h3>SIGN UP</h3>
+						<input id="username" type="text" placeholder="USERNAME" required>
+						<input id="email" type="email" placeholder="EMAIL" required>
+						<input id="password" type="password" placeholder="PASSWORD" required>
+						<p>Already Have An Account? <a href="./login.html">Login</a></p>
+						<button type="submit"> LET'S GO</button>
+					</form>
+				</div>
+			</div>
+			<div class="right">
+				<img src="./data/6333040.jpg">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<script>
+
+	let arrData = JSON.parse(localStorage.getItem('user')) || [];
+	console.log(arrData.length == 0);
+	document.querySelector('form').addEventListener('submit', function (event){
+		event.preventDefault();
+			
+		let username = document.getElementById('username').value;
+		let email = document.getElementById('email').value;
+		let password = +document.getElementById('password').value;
+		let userdata = [];
+		let data = {
+			'username' : username,
+			'email' : email,
+			'password' : password
+		}
+
+		for(let i = 0; i < arrData.length; i++){
+			userdata.push(arrData[i].email)
+		}
+
+		if(arrData.length == 0){
+			arrData.push(data);
+			localStorage.setItem('user', JSON.stringify(arrData));
+			window.location = './login.html';
+		} else {
+			if(userdata.includes(email)){
+				alert('You are an existing user');
+			} else {
+				arrData.push(data);
+				localStorage.setItem('user', JSON.stringify(arrData));
+				window.location = './login.html';
+			}
+		}
+	})
+</script>
