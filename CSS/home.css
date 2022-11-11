@@ -5,6 +5,70 @@
     padding: 0;
 }
 
+header{
+    position: sticky;
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 5% 0px 5%;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: auto;
+    color: #ff4444;
+}
+
+.logo > :last-child{
+    margin-left: 70px;
+    color: #30363c;
+}
+
+.vertical {
+    border-left: 1px solid #ff4444;
+    height: 30px;
+    position:absolute;
+    left: 17%;
+}
+
+.nav{
+    display: flex;
+}
+
+/* .nav button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    height: 40px;
+    background-color: #dce4f1;
+    border-color: #dce4f1;
+    padding: 10px;
+    margin: auto;
+} */
+
+.nav > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    text-decoration: none; 
+}
+
+.nav > a  img{
+    width: 20px;
+    margin-right: 15px;
+}
+
+.logo img{
+    width: 60px;
+}
+
+
 /* //////////////////////////////////////////////////////////// */
 
 .search-bar{
@@ -415,5 +479,6 @@ footer > div:last-child{
 footer > div:last-child div img{
     width: auto;
     margin-right: 20px;
+}
 }
 
