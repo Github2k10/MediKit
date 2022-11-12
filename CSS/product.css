@@ -1,0 +1,223 @@
+.vertical {
+    border-left: 1px solid #ff4444;
+    height: 30px;
+    position:absolute;
+    left: 13%;
+}
+
+.search{
+    width: 550px;
+    display: flex;
+    height: 70%;
+    border-radius: 50px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.icon{
+    width: 20px; height: 20px; margin: auto; margin-left: 10px; margin-right: 10px
+}
+
+form input{
+    width: 100%;
+    float: 1;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 15px;
+    background-color: white;
+}
+
+form button{
+    width: 30%;
+    height: 95%;
+    margin: auto;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 15px;
+    font-family: 'Poppins';
+    color: white;
+    background-color: #10847e;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+form .fa-magnifying-glass{
+    align-self: center;
+    padding: 10px 20px;
+    color: #777;
+}
+
+.top{
+    width: 70%;
+    height: auto;
+    margin: auto;
+    margin-top: 150px;
+}
+
+
+section{
+    width: 70%;
+    height: auto;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+}
+
+section .filter{
+    width: 30%;
+    padding: 10px;
+}
+
+section .filter h2{
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+section .product{
+    width: 70%;
+}
+
+section .product div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section .product div > select{
+    width: 250px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+section .product .product-list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    height: auto;
+}
+
+section .product .product-list > div{
+    display: block;
+    padding: 10px;
+    height: 360px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+}
+
+section .product .product-list > div :hover{
+    border-color: #10847e;
+}
+
+section .product .product-list > div > button{
+    padding: 5px;
+    font-size: 16px;
+    width: 60%;
+    margin: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 15px;
+    background-color: #10847e;
+    color: white;
+    border: 0px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+
+section .product .product-list > div > img{
+    width: auto;
+    height: 50%;
+    font-size: 15px;
+    margin: auto;
+    display: block;
+}
+
+section .product .product-list > div > :nth-child(4){
+    font-size: 12px;
+} 
+
+.filter .filter-price > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.filter .filter-price{
+    margin-bottom: 50px;
+}
+
+.filter .filter-rating > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.banner{
+    display: flex;
+    gap: 50px;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+hr{
+    margin-top: 50px;
+}
+
+.banner > div{
+    width: 30%;
+}
+
+.banner > div > img{
+     width: 50px;
+}
+
+.banner >div > p{
+    font-size: 14px;
+}
+
+.footer{
+    width: 100%;
+    background-color: #eef4ff;
+}
+
+footer{
+    width: 70%;
+    margin: auto;
+    padding: 40px;
+}
+
+footer > div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20px;
+}
+
+footer > div a{
+    text-decoration:  none;
+    color: #4f585e;
+}
+
+footer > div > div i{
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+footer > div:last-child{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > div:last-child div img{
+    width: auto;
+    margin-right: 20px;
+}
