@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/1bffa3735e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/nav.css">
+    <link rel="stylesheet" href="./CSS/product.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <div class="logo">
+                <a href="./home.html">
+                    <img src="./data/logo.png">
+                    <h1 style="color: #ff4444;">MediKit</h1>
+                </a>
+                <div class="vertical"></div>
+            </div>
+
+            <form class="search">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/759/759802.png" alt="">
+                <input type="text" placeholder="Search for healthcare" oninput="search()">
+                <button><b style="color: white;">Search</b></button>
+            </form>
+            <div>
+                <a  href="">
+                    <i class="fa-regular fa-user"></i>
+                    <p>User</p>
+                </a>
+                <a href="">
+                    <i class="fa-solid fa-gift"></i>
+                    <p>Offers</p>
+                </a>
+                <a href="./cart.html" style="pointer-events:all ;">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <p>Cart</p>
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <a href="">Medicine </a>
+                <a href="">Healthcare</a>
+                <a href="">Lab Tests</a>
+                <a href="">Offers</a>
+                <a href="">PLUS</a>
+                <a href="">Health Blogs</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="top"><p>Home > All Products</p></div>
+
+    <section>
+        <div class="filter">
+            <h1 style="font-size: 30px; margin-bottom: 30px;">Filter</h1>
+            <hr>
+            <h2>Price</h2>
+            <hr>
+            <div class="filter-price">
+                <div><label for="">Above 1000</label> <input name="price" type="radio" value="1000"> </div>
+                <div><label for="">700-999</label> <input name="price" type="radio" value="999"> </div>
+                <div><label for="">500-699</label> <input name="price" type="radio" value="699"> </div>
+                <div><label for="">300-499</label> <input name="price" type="radio" value="499"> </div>
+                <div><label for="">100-299</label> <input name="price" type="radio" value="299"> </div>
+                <div><label for="">Below 100</label> <input name="price" type="radio" value="100"> </div>
+            </div>
+            <hr>
+            <h2>Rating</h2>
+            <div class="filter-rating">
+                <div><label for="">4.5+</label> <input type="radio" value="4.5"> </div>
+                <div><label for="">4+</label> <input type="radio" value="4+"> </div>
+                <div><label for="">3.5+</label> <input type="radio" value="3.5"> </div>
+                <div><label for="">3+</label> <input type="radio" value="3"> </div>
+            </div>
+
+        </div>
+        <div class="product">
+            <div>
+                <h2>
+                    <!-- ///////////////// --> All products
+                </h2>
+                <div>
+                    <p>Sort by:</p>
+                    <select name="" id="sort">
+                        <option value="all">Select</option>
+                        <option value="Pet Care">Pet Care</option>
+                        <option value="HealthCare Device">HealthCare Device</option>
+                        <option value="Personal Care">Personal Care</option>
+                        <option value="Health Food">Health Food</option>
+                        <option value="Ayurvedic Care">Ayurvedic Care</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-list">
+                <!-- /////////////////// -->
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <div class="banner">
+        <div>
+            <img src="https://www.gopayz.com.my/content/dam/gopayz/en/support/01-gopayz-is-legit%20(1).png" alt="">
+            <h3>1 Lakh+ Products</h3>
+            <p>We maintain strict quality controls on all our partner retailers, so that you always get standard quality products.</p>
+        </div>
+        <div>
+            <img src="https://uploads-ssl.webflow.com/6018010527c02c8435fa6acc/613a324d25e40b66c43f5817_security-and-compliance.svg" alt="">
+            <h3>Secure Payment</h3>
+            <p>100% secure and trusted payment protection</p>
+        </div>
+        <div>
+            <img src="https://d33wubrfki0l68.cloudfront.net/22928e2e98ff7c6906cc69c00384642df13e63f7/97253/images/google-calendar-rem-img.png" alt="">
+            <h3>Easy Return</h3>
+            <p>We have a new and dynamic return window policy for medicines and healthcare items. Refer FAQs section for more details.</p>
+        </div>
+    </div>
+    <hr>
+    <div class="footer">
+        <footer>
+            <div>
+                <div>
+                    <h3>Our Company</h3>
+                    <a href="">About Us</a>  <br>
+                    <a href=""> Careers</a>  <br>
+                    <a href="">Blog</a>  <br>
+                    <a href="">Partner with PharamEasy</a>  <br>
+                    <a href="">Sell at PharmEasy</a>  <br>
+                    <br>
+                    <h3>Our Services</h3>
+                    <a href=""> Order Medicine</a> <br>
+                    <a href=""> Healthcare Products</a> <br>
+                    <a href=""> Lab Tests</a> <br>
+                    <a href=""> Find Nearest Collection Center</a> <br>
+                    <a href=""> Surgeries</a> <br>
+                </div>
+
+                <div>
+                    <h3>Featured Categories</h3>
+                    <a href="">Pet Care</a> <br>
+                    <a href="">Personal Care</a> <br>
+                    <a href="">Healthcare Devices</a> <br>
+                    <a href="">Health Food and Drinks</a> <br>
+                    <a href="">Beauty</a> <br>
+                    <a href="">Elderly Care</a> <br>
+                    <a href="">Home Care</a> <br>
+                    <a href="">Skin Care</a> <br>
+                    <a href="">Diabetic Care</a> <br>
+                    <a href="">Health Condition</a> <br>
+                    <a href="">Top Products</a> <br>
+                </div>
+
+                <div>
+                    <h3>Need Help</h3>
+                    <a href="">Browse All Medicines</a> <br>
+                    <a href="">Browse All Molecules</a> <br>
+                    <a href="">Browse All Cities</a> <br>
+                    <a href="">Browse All Areas</a> <br>
+                    <a href="">Browse All Stores</a> <br>
+                    <br>
+                    <div>
+                        <h3>Policy Info</h3>
+                        <a href="">Editorial Policy</a> <br>
+                        <a href="">Privicy Policy</a> <br>
+                        <a href="">Vulnerability Disclosure Policy</a> <br>
+                        <a href="">Terms and Condition</a> <br>
+                        <a href="">Customer Support Policy</a> <br>
+                        <a href="">Return Policy</a> <br>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <div>
+                    <h3>Download the App for Free</h3>
+                    <img src="https://assets.pharmeasy.in/apothecary/images/googlePlay.svg?dim=256x0">
+                    <img src="https://assets.pharmeasy.in/apothecary/images/appStore.svg?dim=128x0" >
+                </div>
+
+                <div>
+                    <h3>follow us on</h3>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <p>Our Payment Pattners</p>
+                    <img src="https://assets.pharmeasy.in/apothecary/images/gpay.png?dim=1440x0">
+                    <img src="https://assets.pharmeasy.in/apothecary/images/paytm.png?dim=1440x0">
+                    <img src="https://assets.pharmeasy.in/apothecary/images/phonepe.png?dim=1440x0">
+                    <img src="https://assets.pharmeasy.in/apothecary/images/amazon.png?dim=1440x0">
+                    <img src="https://assets.pharmeasy.in/apothecary/images/mobikwik.png?dim=1440x0">
+                    <img src="https://assets.pharmeasy.in/apothecary/images/olamoney.png?dim=1440x0">
+                    <img src="https://assets.pharmeasy.in/apothecary/images/maestro.png?dim=1440x0">
+                    <img src="https://assets.pharmeasy.in/apothecary/images/mastercard.png?dim=1440x0">
+                    <img src="https://assets.pharmeasy.in/apothecary/images/visa.png?dim=1440x0">
+                    <img src="https://assets.pharmeasy.in/apothecary/images/rupay.png?dim=1440x0">
+                </div>
+                <p>© 2022 PharmEasy. All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+<script src="./Script/prducts.js"></script>
