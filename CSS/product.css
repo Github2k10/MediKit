@@ -11,7 +11,7 @@
     height: 70%;
     border-radius: 50px;
     margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .icon{
@@ -78,6 +78,7 @@ section .filter h2{
 
 section .product{
     width: 70%;
+    pointer-events: all;
 }
 
 section .product div{
@@ -126,7 +127,8 @@ section .product .product-list > div > button{
     background-color: #10847e;
     color: white;
     border: 0px;
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
 }
 
 section .product .product-list > div > img{
@@ -140,6 +142,11 @@ section .product .product-list > div > img{
 section .product .product-list > div > :nth-child(4){
     font-size: 12px;
 } 
+
+section .product .product-list > div > h4{
+    cursor: pointer;
+    font-size: 15px;
+}
 
 .filter .filter-price > div{
     width: 100%;

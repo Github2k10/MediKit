@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>checkout</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="./CSS/signup.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
+	<script src="https://kit.fontawesome.com/1bffa3735e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="login">
+		<div class="login_box">
+			<div class="left">
+				<div class="top"> <a href="./cart.html" style="color: #452A5A;"><i class="fa-solid fa-angle-left"></i> Return home</a> </div>
+				<div class="contact">
+					<form action="">
+						<h3 style="margin: 0; margin-bottom: 10px;">Enter Details</h3>
+						<input id="address" type="text" placeholder="ADDRESS" required>
+						<input id="phone" type="number" placeholder="PHONE NUMBER" required>
+                        <input id="card-number" type="number" placeholder="CARD NUMBER" required>
+                        <input id="date" type="date" placeholder="PHONE NUMBER" required>
+                        <input id="code" type="password" placeholder="Security Code" required>
+                        <p id="total"></p>
+						<button style="margin: 10px;" id="submit" type="submit">Place Order</button>
+					</form>
+				</div>
+			</div>
+			<div class="right">
+				<img src="./data/Lovepik_com-450091953-card with protection shield flat illustration of secure payment.png">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<script>
+   let value =  document.querySelector('#total');
+   let cart = JSON.parse(localStorage.getItem('cart'));
+    value.innerText = "Total Price to Pay: " + JSON.parse(localStorage.getItem('total'));
+    let userdata = JSON.parse(localStorage.getItem('user'));
+
+    cart.push({'order' : JSON.parse(localStorage.getItem('total'))})
+
+    document.querySelector('#submit').addEventListener('click', (event) => {
+        event.preventDefault();
+        let address = document.querySelector('#address').value;
+        let phone = document.querySelector("#phone").value;
+        let card_number = +document.querySelector('#card-number').value;
+        let security_code  = document.querySelector('#code').value;
+
+        if(+card_number == 16){
+            alert('Enter vaild Card Number');
+            return 0;
+        }
+        // userdata[0]['address'] = address;
+        // userdata[0]['phone'] = phone;
+        userdata[0]['orders'] = cart;
+        localStorage.setItem('user', JSON.stringify(userdata));
+        localStorage.removeItem('cart');
+        alert("Order Placed \nThank you for Trusting Us");
+         window.location = "./home.html";
+    })
+</script>

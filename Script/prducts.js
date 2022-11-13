@@ -29,6 +29,11 @@ function displayTable(arr){
 
         let name = document.createElement('h4');
         name.innerText = ele.name;
+        name.setAttribute('cursor', "pointer")
+        name.addEventListener('click', () => {
+            localStorage.setItem('element', JSON.stringify(ele));
+            window.location = './element.html';
+        })
 
         let price = document.createElement('p');
         price.innerHTML = "<b>Price: </b>" + ele.price ;
@@ -45,6 +50,7 @@ function displayTable(arr){
         let button = document.createElement('button');
         button.innerText = "Add to Cart";
         button.addEventListener('click', function (){
+            ele['quantity'] = 1;
             arrData.push(ele);
             localStorage.setItem('cart', JSON.stringify(arrData));
         })
@@ -80,3 +86,13 @@ function search(){
     displayTable(newdata);
 }
 
+let rating_value = document.querySelectorAll(".filter-rating input[name='rating']");
+
+rating_value.forEach((ele) => {
+    ele.addEventListener('change', () => {
+        let newDAta = data.filter(function (element, index){
+            return element.rating > +ele.value
+        })
+        displayTable(newDAta)
+    })
+})

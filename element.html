@@ -4,22 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
+    <title>Product</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
     <script src="https://kit.fontawesome.com/1bffa3735e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./CSS/nav.css">
-    <link rel="stylesheet" href="./CSS/cart.css">
+    <link rel="stylesheet" href="./CSS/product.css">
+    <style>
+        section{
+            margin-top: 130px;
+            width: 70%;
+            display: block;
+        }
+
+        section .product-list{
+            width: 70%;
+            height: auto;
+            margin-top: -100px;   
+            border-radius: 25px;
+        }
+
+        section .product-list > div{
+            display: flex;
+            border-radius: 25px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 20px;
+        }
+
+        section .product-list > div > div{
+            margin: auto;
+            margin-left: 20px;
+        }
+
+        section .product-list > div > img{
+            height: 200px;
+            max-height: 300px;
+            border-radius: 25px;
+        }
+
+        section .product-list > div > div > p, h4{
+            margin: 10px;
+        }
+
+        section .product-list > div h4{
+            font-size: 25px;
+        }
+    </style>
 </head>
 <body>
     <nav>
         <div>
-            <div>
+            <div class="logo">
                 <a href="./home.html">
                     <img src="./data/logo.png">
                     <h1 style="color: #ff4444;">MediKit</h1>
                 </a>
+                <div class="vertical"></div>
             </div>
-
             <div>
                 <a  href="">
                     <i class="fa-regular fa-user"></i>
@@ -48,21 +88,18 @@
         </div>
     </nav>
 
-    <hr>
-    <section>
-        <h1 style="font-size: 30px;">Cart</h1>
-        <div class="cart">
-            <div class="product">
 
-            </div>
-            <div class="details">
-                <h1 style="color: #8897a2;">Your Cart is <br>Empty</h1>
-                <img src="https://assets.pharmeasy.in/web-assets/dist/bb14593e.svg" alt="">
-            </div>
+
+    <section>
+        <p>Home > Product > <p class="top"></p></p>
+        <div class="product-list">
+            <!-- ////////////////////////////////////////// -->
         </div>
+
     </section>
 
-    
+
+
     <hr>
 
     <div class="banner">
@@ -173,7 +210,44 @@
     </div>
 </body>
 </html>
+</body>
+</html>
 
-<script src="./Script/cart.js">
 
+<script>
+    let item = JSON.parse(localStorage.getItem('element'));
+    console.log(item);
+
+    function displayTable(ele){
+        document.querySelector('.product-list').innerHTML = "";
+
+            let div = document.createElement('div');
+            let div1 = document.createElement('div');
+            
+            let img = document.createElement('img');
+            img.setAttribute('src', ele.img);
+
+            let br = document.createElement('br');
+
+            let name = document.createElement('h4');
+            name.innerText = ele.name;
+
+            let price = document.createElement('p');
+            price.innerHTML = "<b>Price: </b>" + ele.price;
+
+            let rating = document.createElement("p");
+            rating.innerHTML = "<b>Rating: </b>" + ele.rating;
+
+            let store = document.createElement('p');
+            store.innerHTML = "<b>Store: </b>" + ele.store;
+
+            let category = document.createElement('p');
+            category.innerHTML = "<b>Category: </b>" + ele.store;
+
+            div1.append(name, store, price, rating)
+            div.append(img, div1);
+            document.querySelector('.product-list').append(div);
+    }
+
+    displayTable(item)
 </script>
