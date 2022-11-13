@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
+    <title>History</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
     <script src="https://kit.fontawesome.com/1bffa3735e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./CSS/nav.css">
@@ -23,31 +23,7 @@
             border-radius: 25px;
         }
 
-        section .product-list > div{
-            display: flex;
-            border-radius: 25px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            padding: 20px;
-        }
-
-        section .product-list > div > div{
-            margin: auto;
-            margin-left: 20px;
-        }
-
-        section .product-list > div > img{
-            height: 200px;
-            max-height: 300px;
-            border-radius: 25px;
-        }
-
-        section .product-list > div > div > p, h4{
-            margin: 10px;
-        }
-
-        section .product-list > div h4{
-            font-size: 25px;
-        }
+       
     </style>
 </head>
 <body>
@@ -91,9 +67,13 @@
 
 
     <section>
-        <p>Home > Product > <p class="top"></p></p>
-        <div class="product-list">
+        <p>Home > History > <p class="top"></p></p>
+        <h1>Last Order</h1>
+        <div class="product">
             <!-- ////////////////////////////////////////// -->
+            <div class="product-list">
+                <!-- /////////////////////////////////////// -->
+            </div>
         </div>
 
     </section>
@@ -210,44 +190,38 @@
     </div>
 </body>
 </html>
-</body>
-</html>
-
 
 <script>
-    let item = JSON.parse(localStorage.getItem('element'));
-    console.log(item);
+    let user = JSON.parse(localStorage.getItem('user'));
+    let items = [];
+    for(let i = 0; i < user[0].orders.length-1; i++){
+        items.push(user[0].orders[i]);
+    }
 
-    function displayTable(ele){
-        document.querySelector('.product-list').innerHTML = "";
+    let total_items = document.createElement('h1');
+    total_items.innerText = "Total Numbers of Items: " + items.length;
+    document.querySelector('.product').append(total_items);
 
+        displayTable(items);
+
+    function displayTable(arr){
+        console.log(arr)
+            document.querySelector('.product-list').innerHTML = "";
+        arr.forEach(function (ele, index){
             let div = document.createElement('div');
             let div1 = document.createElement('div');
-            
             let img = document.createElement('img');
             img.setAttribute('src', ele.img);
 
-            let br = document.createElement('br');
-
-            let name = document.createElement('h4');
+            let  name = document.createElement("h3");
             name.innerText = ele.name;
 
             let price = document.createElement('p');
             price.innerHTML = "<b>Price: </b>" + ele.price;
 
-            let rating = document.createElement("p");
-            rating.innerHTML = "<b>Rating: </b>" + ele.rating;
-
-            let store = document.createElement('p');
-            store.innerHTML = "<b>Store: </b>" + ele.store;
-
-            let category = document.createElement('p');
-            category.innerHTML = "<b>Category: </b>" + ele.store;
-
-            div1.append(name, store, price, rating)
+            div1.append(name, price);
             div.append(img, div1);
             document.querySelector('.product-list').append(div);
+        })
     }
-
-    displayTable(item);
 </script>

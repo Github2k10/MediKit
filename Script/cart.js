@@ -4,7 +4,7 @@ function displayTable(arr){
     document.querySelector('section > h1').innerText = cartData.length + " Items In Cart";
     document.querySelector('.product').innerHTML = "";
 
-    cartData.forEach(function (ele, index){
+    arr.forEach(function (ele, index){
 
         let div = document.createElement('div');
         let div2 = document.createElement('div');
